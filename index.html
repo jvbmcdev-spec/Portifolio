@@ -1,109 +1,135 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Jotas | Front-end Freelancer</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-</head>
-<body>
-
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
     <header class="hero">
-        <div class="container hero-content">
-            <h1>Jotas</h1>
-            <p class="hero-subtitle">Desenvolvedor Front-end Freelancer</p>
-            <p class="hero-tagline">Crio sites modernos, rápidos e responsivos que transformam ideias em resultados reais.</p>
-            <div class="hero-cta">
-    <a href="#contato" class="btn btn-primary">Fale comigo agora</a>
-    <a href="#projetos" class="btn">Ver projetos</a>
-</div>
+      <div class="container hero-content">
+        <h1>Jotas</h1>
+        <p class="hero-subtitle">Desenvolvedor Front-end Freelancer</p>
+        <p class="hero-tagline">
+          Crio sites modernos, rápidos e responsivos que transformam ideias em
+          resultados reais.
+        </p>
+        <div class="hero-cta">
+          <a href="#contato" class="btn btn-primary">Fale comigo agora</a>
+          <a href="#projetos" class="btn">Ver projetos</a>
         </div>
+      </div>
     </header>
 
     <main class="container">
+      <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>
+          Olá! Sou Jotas, apaixonado por front-end e pelo impacto que um bom
+          site pode gerar para negócios.
+        </p>
+        <p>
+          Estou entrando no mundo do freelance com foco em entregar interfaces
+          limpas, performáticas e 100% mobile-first. Vamos construir algo
+          incrível juntos?
+        </p>
+      </section>
 
-        <section id="sobre">
-            <h2>Sobre Mim</h2>
-            <p>Olá! Sou Jotas, apaixonado por front-end e pelo impacto que um bom site pode gerar para negócios.</p>
-            <p>Estou entrando no mundo do freelance com foco em entregar interfaces limpas, performáticas e 100% mobile-first. Vamos construir algo incrível juntos?</p>
-        </section>
+      <section id="habilidades">
+        <h2>Habilidades</h2>
+        <ul class="skills">
+          <li>HTML5</li>
+          <li>CSS3 (Flexbox + Grid)</li>
+          <li>JavaScript (ES6+)</li>
+          <li>Responsividade Mobile First</li>
+          <li>Tailwind CSS</li>
+          <li>React (básico)</li>
+          <li>Git & GitHub</li>
+        </ul>
+      </section>
 
-        <section id="habilidades">
-            <h2>Habilidades</h2>
-            <ul class="skills">
-                <li>HTML5</li>
-                <li>CSS3 (Flexbox + Grid)</li>
-                <li>JavaScript (ES6+)</li>
-                <li>Responsividade Mobile First</li>
-                <li>Tailwind CSS</li>
-                <li>React (básico)</li>
-                <li>Git & GitHub</li>
+      <section id="projetos">
+        <h2>Projetos em Destaque</h2>
+        <div class="projetos-grid">
+          <article class="projeto">
+            <img
+              src="media/projeto01.png"
+              alt="Screenshot da Landing Page Café Moderno"
+            />
+            <h3>Landing Page - Café Moderno</h3>
+            <p>Tecnologias: HTML, CSS, Tailwind</p>
+            <ul>
+              <li>Design mobile first</li>
+              <li>Formulário funcional</li>
+              <li>Animações sutis</li>
             </ul>
-        </section>
-
-        <section id="projetos">
-            <h2>Projetos em Destaque</h2>
-            <div class="projetos-grid">
-                <article class="projeto">
-                    <div class="projeto-placeholder">Projeto 1</div>
-                    <h3>Landing Page - Café Moderno</h3>
-                    <p>Tecnologias: HTML, CSS, Tailwind</p>
-                    <ul>
-                        <li>Design mobile first</li>
-                        <li>Formulário funcional</li>
-                        <li>Animações sutis</li>
-                    </ul>
-                    <div class="projeto-links">
-                        <a href="#" target="_blank">Ver Online</a>
-                        <a href="https://github.com/jvbmcdev-spec/Portifolio" target="_blank">GitHub</a>
-                    </div>
-                </article>
-
-                <article class="projeto">
-    <img src="media/port.png" alt="Screenshot do Portfólio Pessoal">
-    <h3>Portfólio Pessoal</h3>
-    <p>Tecnologias: HTML, CSS puro, JS</p>
-    <ul>
-        <li>Estrutura organizada</li>
-        <li>Gradientes modernos</li>
-        <li>Totalmente responsivo</li>
-    </ul>
-    <div class="projeto-links">
-        <a href="#" target="_blank">Ver Online</a>
-        <a href="#" target="_blank">GitHub</a>
-    </div>
-</article>
-
-                
+            <div class="projeto-links">
+              <a
+                href="https://jvbmcdev-spec.github.io/projeto-1/"
+                target="_blank"
+                >Ver Online</a
+              >
+              <a
+                href="https://github.com/jvbmcdev-spec/projeto-1"
+                target="_blank"
+                >GitHub</a
+              >
             </div>
-        </section>
+          </article>
 
-        <section id="contato">
-    <h2>Entre em Contato</h2>
-    <p>Me manda uma mensagem! Respondo rápido e sem enrolação.</p>
+          <article class="projeto">
+            <img src="media/port.png" alt="Screenshot do Portfólio Pessoal" />
+            <h3>Portfólio Pessoal</h3>
+            <p>Tecnologias: HTML, CSS puro, JS</p>
+            <ul>
+              <li>Estrutura organizada</li>
+              <li>Gradientes modernos</li>
+              <li>Totalmente responsivo</li>
+            </ul>
+            <div class="projeto-links">
+              <a href="#" target="_blank">Ver Online</a>
+              <a
+                href="https://github.com/jvbmcdev-spec/Portifolio"
+                target="_blank"
+                >GitHub</a
+              >
+            </div>
+          </article>
+        </div>
+      </section>
 
-    
-    <form action="https://formspree.io/f/xykdnpwa" method="POST">
-        <input type="text" name="nome" placeholder="Seu nome" required>
-        <input type="email" name="email" placeholder="Seu email" required>
-        <textarea name="mensagem" placeholder="Sua mensagem..." rows="5" required></textarea>
-        <button type="submit" class="btn">Enviar Mensagem</button>
-    </form>
+      <section id="contato">
+        <h2>Entre em Contato</h2>
+        <p>Me manda uma mensagem! Respondo rápido e sem enrolação.</p>
 
-    <div class="contato-alternativos">
-        <p>WhatsApp: +55 (47) 99691-5027</p>
-        <p>Email: jvbmcdev@gmail.com</p>
-        
-    </div>
-</section>
+        <form action="https://formspree.io/f/xykdnpwa" method="POST">
+          <input type="text" name="nome" placeholder="Seu nome" required />
+          <input type="email" name="email" placeholder="Seu email" required />
+          <textarea
+            name="mensagem"
+            placeholder="Sua mensagem..."
+            rows="5"
+            required
+          ></textarea>
+          <button type="submit" class="btn">Enviar Mensagem</button>
+        </form>
 
+        <div class="contato-alternativos">
+          <p>WhatsApp: +55 (47) 99691-5027</p>
+          <p>Email: jvbmcdev@gmail.com</p>
+        </div>
+      </section>
     </main>
 
     <footer>
-        <p>© 2026 Jotas</p>
+      <p>© 2026 Jotas</p>
     </footer>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
