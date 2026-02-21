@@ -1,0 +1,317 @@
+/* Reset e base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.7;
+    color: #e2e8f0;
+    background: #0f172a;
+    font-size: 1.05rem;
+    overflow-x: hidden;
+}
+
+/* Container central */
+.container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
+
+/* Hero */
+.hero {
+    background: linear-gradient(135deg, #1e40af 0%, #6d28d9 70%, #a21caf 100%);
+    color: #ffffff;
+    text-align: center;
+    padding: 10rem 1rem 12rem;
+    position: relative;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.hero.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at 30% 70%, rgba(255,255,255,0.1) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    margin-bottom: 0.8rem;
+    text-shadow: 0 6px 24px rgba(0,0,0,0.6);
+}
+
+.hero-subtitle {
+    font-size: 2rem;
+    font-weight: 500;
+    opacity: 0.95;
+    margin-bottom: 2rem;
+}
+
+.hero-tagline {
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto 3.5rem;
+    opacity: 0.92;
+}
+
+/* Botões do hero – estilo pílula igual às habilidades */
+.hero-cta {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.hero-cta .btn {
+    background: rgba(30,41,59,0.75);
+    color: #e2e8f0;
+    padding: 0.85rem 2rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    font-size: 1.1rem;
+    border: 1px solid rgba(96,165,250,0.35);
+    backdrop-filter: blur(8px);
+    min-width: 220px;
+    text-align: center;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.hero-cta .btn:hover {
+    transform: translateY(-3px);
+    background: rgba(30,41,59,0.9);
+    border-color: #60a5fa;
+    box-shadow: 0 8px 20px rgba(96,165,250,0.3);
+}
+
+/* Destaque opcional no botão principal */
+.hero-cta .btn-primary {
+    background: linear-gradient(to right, rgba(59,130,246,0.25), rgba(96,165,250,0.25));
+    border-color: #60a5fa;
+    font-weight: 600;
+}
+
+.hero-cta .btn-primary:hover {
+    background: linear-gradient(to right, rgba(59,130,246,0.45), rgba(96,165,250,0.45));
+}
+
+/* Seções gerais – background igual ao body */
+section {
+    padding: 8rem 0;
+    background: #0f172a;                /* ← Alterado para igual ao body */
+    border-top: 1px solid rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.05);
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.9s ease-out, transform 0.9s ease-out;
+}
+
+section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+h2 {
+    font-size: 3.4rem;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 4rem;
+    color: #60a5fa;
+    text-shadow: 0 4px 16px rgba(0,0,0,0.5);
+}
+
+/* Habilidades */
+.skills {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.2rem;
+    justify-content: center;
+    list-style: none;
+}
+
+.skills li {
+    background: rgba(30,41,59,0.75);
+    color: #e2e8f0;
+    padding: 0.85rem 1.8rem;
+    border-radius: 9999px;
+    font-weight: 500;
+    border: 1px solid rgba(96,165,250,0.35);
+    backdrop-filter: blur(8px);
+}
+
+/* Projetos */
+.projetos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 3rem;
+}
+
+.projeto {
+    background: rgba(30,41,59,0.6);
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(96,165,250,0.18);
+    transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    backdrop-filter: blur(12px);
+    opacity: 0;
+    transform: translateY(50px);
+}
+
+.projeto.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.projeto:hover {
+    transform: translateY(-18px) scale(1.03);
+    border-color: #60a5fa;
+    box-shadow: 0 30px 60px rgba(0,0,0,0.5);
+}
+
+.projeto-placeholder {
+    height: 260px;
+    background: linear-gradient(135deg, #1e293b, #334155);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #64748b;
+}
+
+.projeto h3 {
+    padding: 1.8rem 2.2rem 0.8rem;
+    font-size: 1.8rem;
+    color: #f1f5f9;
+}
+
+.projeto p,
+.projeto ul {
+    padding: 0 2.2rem 1.6rem;
+    color: #cbd5e1;
+}
+
+.projeto-links {
+    padding: 0 2.2rem 2.2rem;
+    display: flex;
+    gap: 1.8rem;
+}
+
+.projeto-links a {
+    color: #60a5fa;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.projeto-links a:hover {
+    text-decoration: underline;
+}
+
+/* Contato */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    max-width: 680px;
+    margin: 3.5rem auto;
+}
+
+input, textarea {
+    padding: 1.4rem;
+    border: 1px solid rgba(148,163,184,0.35);
+    border-radius: 14px;
+    background: rgba(30,41,59,0.55);
+    color: #f1f5f9;
+    font-size: 1.12rem;
+    transition: border-color 0.3s;
+}
+
+input:focus, textarea:focus {
+    outline: none;
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96,165,250,0.25);
+}
+
+.btn-primary[type="submit"] {
+    background: linear-gradient(90deg, #3b82f6, #8b5cf6, #ec4899);
+    background-size: 200% 200%;
+    color: white;
+    border: none;
+    box-shadow: 0 10px 30px rgba(59,130,246,0.45);
+}
+
+.btn-primary[type="submit"]:hover {
+    transform: translateY(-6px) scale(1.04);
+    background-position: right center;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 5rem 1rem 4rem;
+    background: #020617;
+    color: #94a3b8;
+    font-size: 0.98rem;
+    border-top: 1px solid rgba(255,255,255,0.05);
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .hero {
+        padding: 13rem 1rem 15rem;
+    }
+
+    .hero h1 {
+        font-size: 7.5rem;
+    }
+
+    .hero-cta {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .projetos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(420px, 1fr));
+    }
+
+    section {
+        padding: 10rem 0;
+    }
+
+    h2 {
+        font-size: 4rem;
+    }
+}
+.projeto img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;          /* mantém proporção sem distorcer */
+}
